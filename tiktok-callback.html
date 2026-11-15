@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signing in…</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>Signing in…</h1>
+<p id="msg">Returning to the publishing tool on this computer.</p>
+<script>
+  // TikTok redirects here (an https page is required); the tool listens on localhost and receives the code.
+  var q = window.location.search;
+  if (q.indexOf("code=") >= 0 || q.indexOf("error=") >= 0) {
+    window.location.replace("http://localhost:8765/tiktok" + q);
+  } else {
+    document.getElementById("msg").textContent = "Nothing to do here.";
+  }
+</script>
+</main></body></html>
