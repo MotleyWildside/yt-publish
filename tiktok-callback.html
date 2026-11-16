@@ -8,7 +8,7 @@
   // TikTok redirects here (an https page is required); the tool listens on localhost and receives the code.
   var q = window.location.search;
   if (q.indexOf("code=") >= 0 || q.indexOf("error=") >= 0) {
-    window.location.replace("http://localhost:8765/tiktok" + q);
+    window.location.replace("http://localhost:47615/tiktok" + q);
   } else {
     document.getElementById("msg").textContent = "Nothing to do here.";
   }
